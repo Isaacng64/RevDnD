@@ -15,7 +15,7 @@ export class UserService {
     p = p.append("username", username);
     p = p.append("password", password);
     p = p.append("email", email);
-    p = p.append("mobile", phone);
+    p = p.append("phone", phone);
     return this.httpClient.get<String>(this.baseURL+'/register',{params: p});
   }
 }

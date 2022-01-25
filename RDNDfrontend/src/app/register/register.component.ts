@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { UserService } from '../user.service';
-
+import { FormsModule } from '@angular/forms' 
+import { ReactiveFormsModule} from '@angular/forms' 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -12,8 +13,10 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  register(data:{username: string, password: string, email: string, phone: string})
+  onRegister(data:{username: string, password: string, email: string, phone: string})
   {
-    this.userS.register(data.username, data.password, data.email, data.phone)
+    this.userS.register(data.username, data.password, data.email, data.phone).subscribe(data=>{
+      
+    })
   }
 }

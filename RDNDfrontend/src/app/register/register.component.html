@@ -1,18 +1,25 @@
-<h1>Register</h1> 
+ 
   <form #register="ngForm" (ngSubmit)="onRegister(register.value)"> 
+    <h1>Register</h1>
     Username:<br /> 
-    <input type ="text" name="username" placeholder="Enter Username" required ngModel/> 
+    <div class="form-group">
+       <input type ="text" class="form-control" name="username" placeholder="Enter Username" required ngModel/> 
+    </div>  
     <br /> 
     Password:<br /> 
-    <input type ="password" name="password" placeholder="Enter Password" required ngModel/> 
+    <div class="form-group">
+    <input type ="password" class="form-control" name="password" placeholder="Enter Password" required ngModel/> 
+    </div>
     <br /> 
     Email:<br /> 
- 
-    <input type ="text" name="email" placeholder="Enter Email" required ngModel/> 
+    <div class="form-group">
+    <input type ="text" class="form-control" name="email" placeholder="Enter Email" required ngModel/> 
+    </div>
     <br /> 
     Mobile:<br /> 
-    <input type ="text" name="phone" placeholder="Enter Phone Number" required ngModel/> 
-    
+    <div class="form-group">
+       <input type ="text" class="form-control" name="phone" placeholder="Enter Phone Number" required ngModel/> 
+    </div>
     <br /> <br /> 
 
     <button class="btn btn-success" type="submit">Submit</button>
