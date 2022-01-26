@@ -2,5 +2,7 @@
   <header class="jumbotron">
     <h3><strong></strong>Monsters</h3>
   </header>
-  <app-monster-card></app-monster-card>
+  <div *ngFor="let monster of listMonsters">
+    <app-monster-card>{{monster.name}}</app-monster-card>
+  </div>
 </div>
