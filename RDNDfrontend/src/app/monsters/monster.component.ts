@@ -10,12 +10,14 @@ import { MonstersService } from '../_services/monsters.service';
 })
 export class MonsterComponent implements OnInit {
 
-  listMonsters!: Observable<any>;
+  listmonsters!: any;
 
   constructor(private monstersService: MonstersService) { }
 
   ngOnInit(): void {
-    this.listMonsters = this.monstersService.listMonsters();
+    this.monstersService.listMonsters().subscribe((data: any) => {
+      this.listmonsters =data;
+    } );
   }
 
 }
