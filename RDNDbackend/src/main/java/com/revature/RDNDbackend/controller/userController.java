@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.revature.RDNDbackend.User;
+import com.revature.RDNDbackend.andrew.User;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api/v1")
@@ -43,10 +43,12 @@ public class userController {
 	public void update(@RequestBody User user)
 	{
 		System.out.println("Client connected!");
+		
 		SessionFactory sf= new Configuration().configure().buildSessionFactory();
 		Session session = sf.openSession();
 		 session.beginTransaction();
 		 session.update(user);
+		 
 		 System.out.println(user);
 		 session.getTransaction().commit();
 		 session.close();
