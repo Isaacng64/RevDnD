@@ -7,10 +7,12 @@ import { RegisterComponent } from './register/register.component';
 import { FormsModule } from '@angular/forms' 
 import { ReactiveFormsModule} from '@angular/forms' 
 import { HttpClientModule } from '@angular/common/http';
+import { UpdateUserComponent } from './update-user/update-user.component';
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent
+    RegisterComponent,
+    UpdateUserComponent
   ],
   imports: [
     BrowserModule,
