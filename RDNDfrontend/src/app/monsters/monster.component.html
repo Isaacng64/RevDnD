@@ -2,10 +2,11 @@
   <header class="jumbotron">
     <h3><strong></strong>Monsters</h3>
   </header>
-  <div >
-    <p *ngFor= "let monster of listmonsters">
-      {{monster.name}}
-    </p>
+  <div *ngFor = "let monster of listmonsters.results" >
+    
 
+    <app-monster-card  [paranMonster] = "monster.index"></app-monster-card>
   </div>
+
 </div>
+

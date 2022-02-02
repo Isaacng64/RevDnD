@@ -1,12 +1,21 @@
 <div class="card">
   <h1>
-    monster's name
+   <strong>Name:</strong> {{monster.name}}
   </h1>
-  <h3>type</h3>
-  <h3>cr</h3>
-  <p>discription</p>
-  <p>hp</p>
-  <p>movement</p>
+  <p><strong>Type:</strong> {{monster.type}}</p>
+  <p><strong>Size:</strong> {{monster.size}}</p>
+  <p><strong>Hit Points:</strong> {{monster.hit_points}}</p>
+  <h3><strong>Actions</strong></h3>
+  <div *ngFor="let action of monster.actions ">
+    <p> <strong>Action:</strong> {{action.name}}</p>
+    <p> <strong>Description:</strong> {{action.desc}}</p>
+  </div>
+  <h3><strong>Proficiencies</strong></h3>
+  <div *ngFor="let proficiency of monster.proficiencies">
+    <p><strong>proficiency:</strong> {{proficiency.proficiency.name}} {{proficiency.value}}</p>
+
+  </div>
+
   <div>
     <p>stats</p>
   </div>

@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'admin', component: BoardAdminComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'monsters', component: MonsterComponent },
-  { path: 'monster/:id', component:  MonsterCardComponent}
+  { path: 'monster/:name', component:  MonsterCardComponent}
 ];
 
 @NgModule({

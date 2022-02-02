@@ -10,12 +10,12 @@ export class MonstersService {
 
   constructor(private http: HttpClient) {}
 
-  listMonsters():Observable<any>
-  {
+  listMonsters(): Observable<Object> {
     return this.http.get(this.baseUrl + 'monsters');
   }
 
-  // getMonster() {
-  //   return this.http.get(this.baseUrl + 'monsters');
-  // }
+  getMonster(name : string) : Observable<Object> {
+    // console.log("name is " + name);
+    return this.http.get(this.baseUrl + 'monsters/' + name);
+  }
 }

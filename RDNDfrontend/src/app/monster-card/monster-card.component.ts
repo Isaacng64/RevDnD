@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MonstersService } from '../_services/monsters.service';
+import { MonsterComponent } from '../monsters/monster.component';
 
 @Component({
   selector: 'app-monster-card',
@@ -7,10 +9,17 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MonsterCardComponent implements OnInit {
 
- 
-  constructor() { }
+  @Input() paranMonster : string ='';
+  monster!: any;
+  constructor(private monstersService: MonstersService) { }
 
   ngOnInit(): void {
+    this.monstersService.getMonster(this.paranMonster).subscribe((data: any) => {
+      this.monster = data;
+
+      // console.log(this.paranMonster)
+      // console.log(data)
+    });
   }
 
 }
