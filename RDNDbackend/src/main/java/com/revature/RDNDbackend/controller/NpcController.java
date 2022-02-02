@@ -32,23 +32,12 @@ public class NpcController {
 
     // to create an npc
     // http://localhost:8080/rdnd/npcs/create
-    /* Body's JSON
-        {
-            "npcName": "Acid (vial)",
-            "npcType": "Adventuring Gear",
-            "npcPrice": 25,
-            "hitBonus": 3,
-            "damageBonus": 26,
-            "npcProperties": "Combat, Damage, Utility",
-            "npcQuantity": 1
-        }
     */
     @PostMapping("/npcs")
     public ResponseEntity<Npc> createNpc(@RequestBody Npc npc) {
         return new ResponseEntity<Npc>(npcRepository.save(npc), HttpStatus.CREATED);
     }
 
-    // to get equipment by id
     // http://localhost:8080/rdnd/npcs/1
     @GetMapping("/npcs/{id}")
     public Npc getNpcById(@PathVariable("id") Long npcId){
