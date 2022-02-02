@@ -1,0 +1,30 @@
+<div class="card mCard">
+  <h1><strong>Name:</strong> {{ monster.name }}</h1>
+  <p><strong>Type:</strong> {{ monster.type }}</p>
+  <p><strong>Challenge Rating:</strong> {{ monster.challenge_rating }}</p>
+  <p><strong>Size:</strong> {{ monster.size }}</p>
+  <p><strong>Hit Points:</strong> {{ monster.hit_points }}</p>
+  <h3><strong>Actions</strong></h3>
+  <div class="card mCard2" *ngFor="let action of monster.actions">
+    <p><strong>Action:</strong> {{ action.name }}</p>
+    <p><strong>Description:</strong> {{ action.desc }}</p>
+  </div>
+  <h3><strong>Proficiencies</strong></h3>
+  <div class="mCard2">
+    <div *ngFor="let proficiency of monster.proficiencies">
+      <p>
+        <strong>proficiency:</strong> {{ proficiency.proficiency.name }}
+        {{ proficiency.value }}
+      </p>
+    </div>
+  </div>
+  <h3><strong>Stats</strong></h3>
+  <div class="mCard2">
+    <p><strong>Strength:</strong> {{ monster.strength }}</p>
+    <p><strong>Dexterity:</strong> {{ monster.dexterity }}</p>
+    <p><strong>Constitution:</strong> {{ monster.constitution }}</p>
+    <p><strong>Intelligence:</strong> {{ monster.intelligence }}</p>
+    <p><strong>Wisdom:</strong> {{ monster.wisdom }}</p>
+    <p><strong>Charisma:</strong> {{ monster.charisma }}</p>
+  </div>
+</div>

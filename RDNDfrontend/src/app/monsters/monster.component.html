@@ -1,0 +1,12 @@
+<div class="container">
+  <header class="jumbotron">
+    <h1><strong>Monsters</strong></h1>
+  </header>
+  <div *ngFor = "let monster of listmonsters.results" >
+
+
+    <app-monster-card  [paranMonster] = "monster.index"></app-monster-card>
+  </div>
+
+</div>
+
