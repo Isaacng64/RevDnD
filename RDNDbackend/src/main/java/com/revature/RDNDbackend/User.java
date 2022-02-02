@@ -6,14 +6,16 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.stereotype.Component;
+
 import lombok.Setter;
 import lombok.Data;
-//import lombok.*;
 
 @Data
 @Setter
 @Entity
 @Table(name = "tbl_user")
+@Component
 public class User {
 	@Id 
 	private int id;
