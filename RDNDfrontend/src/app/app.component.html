@@ -15,10 +15,10 @@
         <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
       </li>
       <li class = "nav-item">
-        <a href="/npcs" routerLink="npcs" routerLinkActive="active" class="nav-link" >Npcs</a>
+        <a href="/npcs" class="nav-link" *ngIf="isLoggedIn" routerLink="npcs" >Npcs</a>
       </li>
       <li>
-        <a href="/npc-create" routerLink="npc-create" routerLinkActive="active" class="nav-link" >Add Npc</a>
+        <a href="/npc-create" class="nav-link" *ngIf="isLoggedIn" routerLink="npc-create">Add Npc</a>
       </li>
     </ul>
 
@@ -45,3 +45,4 @@
     <router-outlet></router-outlet>
   </div>
 </div>
+
