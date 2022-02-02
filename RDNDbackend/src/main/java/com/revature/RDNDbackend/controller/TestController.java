@@ -1,4 +1,4 @@
-package com.revature.RDNDbackend.controllers;
+package com.revature.RDNDbackend.controller;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
