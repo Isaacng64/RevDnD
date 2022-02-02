@@ -10,6 +10,11 @@ import { BoardModeratorComponent } from './board-moderator/board-moderator.compo
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { MonsterComponent } from './monsters/monster.component';
 import { MonsterCardComponent } from './monster-card/monster-card.component';
+import { NpcCreateComponent } from './npc-create/npc-create.component';
+import { NpcUpdateComponent } from './npc-update/npc-update.component';
+import { NpcListComponent } from './npc-list/npc-list.component';
+import { NpcSheetComponent } from './npc-sheet/npc-sheet.component';
+
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
@@ -20,7 +25,11 @@ const routes: Routes = [
   { path: 'admin', component: BoardAdminComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'monsters', component: MonsterComponent },
-  { path: 'monster/:name', component:  MonsterCardComponent}
+  { path: 'monster/:name', component:  MonsterCardComponent},
+  { path: 'npcs', component: NpcListComponent },
+  { path: 'npc-create', component: NpcCreateComponent },
+  { path: 'npc-update/:npcId', component: NpcUpdateComponent },
+  { path: 'npc-sheet/:npcId', component: NpcSheetComponent }
 ];
 
 @NgModule({

@@ -18,6 +18,10 @@ import { BoardUserComponent } from './board-user/board-user.component';
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
 import { MonsterComponent } from './monsters/monster.component';
 import { MonsterCardComponent } from './monster-card/monster-card.component';
+import { NpcCreateComponent } from './npc-create/npc-create.component';
+import { NpcUpdateComponent } from './npc-update/npc-update.component';
+import { NpcListComponent } from './npc-list/npc-list.component';
+import { NpcSheetComponent } from './npc-sheet/npc-sheet.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { MonsterCardComponent } from './monster-card/monster-card.component';
     BoardModeratorComponent,
     BoardUserComponent,
     MonsterComponent,
-    MonsterCardComponent
+    MonsterCardComponent,
+    NpcCreateComponent,
+    NpcUpdateComponent,
+    NpcListComponent,
+    NpcSheetComponent
   ],
   imports: [
     BrowserModule,
