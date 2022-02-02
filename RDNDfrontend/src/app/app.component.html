@@ -14,6 +14,12 @@
       <li class="nav-item">
         <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
       </li>
+      <li class = "nav-item">
+        <a href="/npcs" routerLink="npcs" routerLinkActive="active" class="nav-link" >Npcs</a>
+      </li>
+      <li>
+        <a href="/npc-create" routerLink="npc-create" routerLinkActive="active" class="nav-link" >Add Npc</a>
+      </li>
     </ul>
 
     <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
