@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';  
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +18,8 @@ import { BoardModeratorComponent } from './board-moderator/board-moderator.compo
 import { BoardUserComponent } from './board-user/board-user.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
+import { MonsterComponent } from './monsters/monster.component';
+import { MonsterCardComponent } from './monster-card/monster-card.component';
 
 @NgModule({
   declarations: [
@@ -28,9 +30,9 @@ import { authInterceptorProviders } from './_helpers/auth.interceptor';
     ProfileComponent,
     BoardAdminComponent,
     BoardModeratorComponent,
-    BoardUserComponen,
-    tUpdateUserComponent
-
+    BoardUserComponent,
+    MonsterComponent,
+    MonsterCardComponent
   ],
   imports: [
     BrowserModule,
