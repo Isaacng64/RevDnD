@@ -32,13 +32,11 @@ public class NpcController {
 
     // to create an npc
     // http://localhost:8080/rdnd/npcs/create
-    */
     @PostMapping("/npcs")
     public ResponseEntity<Npc> createNpc(@RequestBody Npc npc) {
         return new ResponseEntity<Npc>(npcRepository.save(npc), HttpStatus.CREATED);
     }
 
-    // http://localhost:8080/rdnd/npcs/1
     @GetMapping("/npcs/{id}")
     public Npc getNpcById(@PathVariable("id") Long npcId){
         Optional<Npc> npc = npcRepository.findById(npcId);
