@@ -12,7 +12,9 @@
         <a href="/mod" class="nav-link" routerLink="mod">Moderator Board</a>
       </li>
       <li class="nav-item">
-        <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
+        <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user"
+          >User</a
+        >
       </li>
     </ul>
 
@@ -27,8 +29,14 @@
 
     <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
       <li class="nav-item">
-        <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+        <a href="/profile" class="nav-link" routerLink="profile">{{
+          username
+        }}</a>
       </li>
+      <li class="nav-item">
+        <a href="/monsters" class="nav-link" routerLink="monsters">Monsters</a>
+      </li>
+
       <li class="nav-item">
         <a href class="nav-link" (click)="logout()">LogOut</a>
       </li>

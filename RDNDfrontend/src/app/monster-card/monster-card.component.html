@@ -5,19 +5,21 @@
   <p><strong>Size:</strong> {{ monster.size }}</p>
   <p><strong>Hit Points:</strong> {{ monster.hit_points }}</p>
   <h3><strong>Actions</strong></h3>
-  <div *ngFor="let action of monster.actions">
+  <div class="card mCard2" *ngFor="let action of monster.actions">
     <p><strong>Action:</strong> {{ action.name }}</p>
     <p><strong>Description:</strong> {{ action.desc }}</p>
   </div>
   <h3><strong>Proficiencies</strong></h3>
-  <div *ngFor="let proficiency of monster.proficiencies">
-    <p>
-      <strong>proficiency:</strong> {{ proficiency.proficiency.name }}
-      {{ proficiency.value }}
-    </p>
+  <div class="mCard2">
+    <div *ngFor="let proficiency of monster.proficiencies">
+      <p>
+        <strong>proficiency:</strong> {{ proficiency.proficiency.name }}
+        {{ proficiency.value }}
+      </p>
+    </div>
   </div>
   <h3><strong>Stats</strong></h3>
-  <div>
+  <div class="mCard2">
     <p><strong>Strength:</strong> {{ monster.strength }}</p>
     <p><strong>Dexterity:</strong> {{ monster.dexterity }}</p>
     <p><strong>Constitution:</strong> {{ monster.constitution }}</p>
