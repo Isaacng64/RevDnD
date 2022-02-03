@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -22,6 +21,7 @@ import { NpcCreateComponent } from './npc-create/npc-create.component';
 import { NpcUpdateComponent } from './npc-update/npc-update.component';
 import { NpcListComponent } from './npc-list/npc-list.component';
 import { NpcSheetComponent } from './npc-sheet/npc-sheet.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
 
 @NgModule({
   declarations: [
@@ -38,16 +38,17 @@ import { NpcSheetComponent } from './npc-sheet/npc-sheet.component';
     NpcCreateComponent,
     NpcUpdateComponent,
     NpcListComponent,
-    NpcSheetComponent
+    NpcSheetComponent,
+    UpdateUserComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [authInterceptorProviders],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
