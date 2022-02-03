@@ -2,8 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';  
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +15,12 @@ import { BoardModeratorComponent } from './board-moderator/board-moderator.compo
 import { BoardUserComponent } from './board-user/board-user.component';
 
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
+import { MonsterComponent } from './monsters/monster.component';
+import { MonsterCardComponent } from './monster-card/monster-card.component';
+import { NpcCreateComponent } from './npc-create/npc-create.component';
+import { NpcUpdateComponent } from './npc-update/npc-update.component';
+import { NpcListComponent } from './npc-list/npc-list.component';
+import { NpcSheetComponent } from './npc-sheet/npc-sheet.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 
 @NgModule({
@@ -28,16 +33,22 @@ import { UpdateUserComponent } from './update-user/update-user.component';
     BoardAdminComponent,
     BoardModeratorComponent,
     BoardUserComponent,
-    UpdateUserComponent
+    MonsterComponent,
+    MonsterCardComponent,
+    NpcCreateComponent,
+    NpcUpdateComponent,
+    NpcListComponent,
+    NpcSheetComponent,
+    UpdateUserComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [authInterceptorProviders],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

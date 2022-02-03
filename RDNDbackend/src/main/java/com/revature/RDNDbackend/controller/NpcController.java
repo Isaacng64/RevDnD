@@ -24,14 +24,18 @@ public class NpcController {
     private NpcRepository npcRepository;
 
     // to get all npcs
+
     // http://localhost:8086/rdnd/npcs/viewall
+
     @GetMapping("/npcs")
     public List<Npc> getAllNpc(){
         return npcRepository.findAll();
     }
 
     // to create an npc
+
     // http://localhost:8086/rdnd/npcs/create
+
     @PostMapping("/npcs")
     public ResponseEntity<Npc> createNpc(@RequestBody Npc npc) {
         return new ResponseEntity<Npc>(npcRepository.save(npc), HttpStatus.CREATED);
@@ -49,7 +53,9 @@ public class NpcController {
     }
 
     // to update npc
+
     // http://localhost:8086/rdnd/npc/1
+
     @PutMapping("/npcs/{id}")
     public Npc updateNpc(@PathVariable("id") Long npcId,
                                      @RequestBody Npc npcDetails) {
@@ -85,7 +91,9 @@ public class NpcController {
     }
 
     // to delete equipment
+
     // http://localhost:8086/rdnd/npc/1
+
     @DeleteMapping("/npcs/{id}")
     public boolean deleteNpc(@PathVariable("id") Long npcId) {
         try {

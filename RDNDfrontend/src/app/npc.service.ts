@@ -9,7 +9,9 @@ import { Npc} from './npc';
 })
 export class NpcService {
 
+
   private baseURL = "http://localhost:8086/rdnd/npcs";
+
 
   constructor(private httpClient: HttpClient) { }
 

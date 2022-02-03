@@ -1,0 +1,25 @@
+<div class = "row">
+  <h2> NPCs</h2>
+</div>
+
+<table class = "table table-striped table-bordered">
+  <thead>
+      <tr>
+          <th> Name</th>
+          <th> Race and Class</th>
+          <th> Actions </th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor = "let npc of npcs" >
+          <td> {{ npc.npcName }} </td>
+          <td> {{ npc.npcRace }} {{ npc.npcClass }}</td>
+          <td>
+              <button (click) = "updateNpc(npc.npcId)" class = "btn btn-primary"> Update Sheet</button>
+              <button (click) = "deleteNpc(npc.npcId)" class = "btn btn-danger" style="margin-left: 10px"> Delete Sheet</button>
+              <button (click) = "npcSheet(npc.npcId)" class = "btn btn-primary" style="margin-left: 10px"> Open Sheet</button>
+          </td>
+      </tr>
+  </tbody>
+</table>
+<br />
