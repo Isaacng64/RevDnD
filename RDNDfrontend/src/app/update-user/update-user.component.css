@@ -1,0 +1,14 @@
+* {
+    align-content: center;
+ }
+ form{
+     align-items: center;
+     font-size: 16px;
+     margin: 5%;
+     width: 800px;
+ }
+ button
+ {
+     font-size: 24px;
+     width: 20%;
+ }

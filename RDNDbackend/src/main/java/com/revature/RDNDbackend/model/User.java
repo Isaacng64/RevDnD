@@ -17,13 +17,13 @@ import javax.validation.constraints.Size;
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private long id;
 
 	@NotBlank
 	@Size(max = 20)
 	private String username;
 
-	@NotBlank
+	//@NotBlank
 	@Size(max = 50)
 	@Email
 	private String email;
@@ -39,6 +39,7 @@ public class User {
 	private Set<Role> roles = new HashSet<>();
 
 	public User() {
+		super();
 	}
 
 	public User(String username, String email, String password) {
@@ -46,12 +47,17 @@ public class User {
 		this.email = email;
 		this.password = password;
 	}
-
-	public Long getId() {
+	public User(long id, String username, String email, String password) {
+		this.id = id;
+		this.username = username;
+		this.email = email;
+		this.password = password;
+	}
+	public long getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

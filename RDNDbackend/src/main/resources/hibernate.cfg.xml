@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="spring.jpa.properties.hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://revature.cv3secx2f8tr.us-east-2.rds.amazonaws.com/rdnd</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">postgres</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="connection.pool_size">1</property>
+        <property name="current_session_context_class">thread</property>
+		<mapping class="com.revature.RDNDbackend.model.User"/>
+		<mapping class="com.revature.RDNDbackend.model.Role"/>
+		<mapping class="com.revature.RDNDbackend.model.ERole"/>
+		
+    </session-factory>
+</hibernate-configuration>

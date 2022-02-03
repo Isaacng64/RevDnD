@@ -5,8 +5,14 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.validation.Valid;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -123,7 +129,49 @@ public class AuthController {
 
 		user.setRoles(roles);
 		userRepository.save(user);
-
+		/*
+		 SessionFactory sf= new Configuration().configure().buildSessionFactory();
+			Session session = sf.openSession();
+			 session.beginTransaction();
+			 session.save(user);
+			 session.getTransaction().commit();
+			 session.close();
+		*/
 		return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
+	}
+	
+	@PostMapping("/userupdate")
+	public void update(@RequestBody User user)
+	{
+		
+		System.out.println("Client connected!");
+		System.out.println(user.toString());
+		System.out.println(user.getId());
+		
+		SessionFactory sf= new Configuration().configure().buildSessionFactory();
+		Session session = sf.openSession();
+		 session.beginTransaction();
+		 long id = user.getId();
+		 
+		  User u = session.get(User.class, id);
+		 
+		 if(user.getEmail()!="")
+			 u.setEmail(user.getEmail());
+		 //if(user.getPassword()!="")
+		//	 u.setPassword(encoder.encode(user.getPassword()));
+		if(user.getUsername()!="")
+		{
+			u.setUsername(user.getUsername());
+		}
+		 session.update(u);
+		 
+		 System.out.println(u);
+		
+		 session.getTransaction().commit();
+		  
+		 session.close();
+		 
+
+		 
 	}
 }
