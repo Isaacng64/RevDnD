@@ -69,15 +69,6 @@ public class EquipmentController {
     }
 
 
-    // to get equipment by name
-    // http://localhost:8080/rdnd/equipment/name/Abacus
-    @GetMapping("equipment/name/{eqName}")
-    public List<Equipment> getEquipmentById(@PathVariable("eqName") String equipmentName) {
-
-        return equipmentRepository.findEquipmentByName(equipmentName);
-    }
-
-
     // to update equipment
     // http://localhost:8080/rdnd/equipment/1
     @PutMapping("equipment/{eqId}")

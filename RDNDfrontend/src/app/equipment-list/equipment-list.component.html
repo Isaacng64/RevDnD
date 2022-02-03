@@ -1,0 +1,27 @@
+<h2 class="text-center">Equipment List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Price</th>
+            <th>Hit Bonus</th>
+            <th>Damage Bonus</th>
+            <th>Properties</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let eqmnt of equipment">
+            <td>{{ eqmnt.equipmentId }}</td>
+            <td>{{ eqmnt.equipmentName }}</td>
+            <td>{{ eqmnt.equipmentType }}</td>
+            <td>{{ eqmnt.equipmentPrice }}</td>
+            <td>{{ eqmnt.hitBonus }}</td>
+            <td>{{ eqmnt.damageBonus }}</td>
+            <td>{{ eqmnt.equipmentProperties }}</td>
+            <td>{{ eqmnt.equipmentQuantity }}</td>
+        </tr>
+    </tbody>
+</table>
