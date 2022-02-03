@@ -17,7 +17,7 @@ export class CharacterComponent implements OnInit {
   getHeroes(): void  {
     this.charactersService.findAll().subscribe((data:any)=>{
       this.characters = data;
-      console.log(this.characters);
+      console.log(data);
     });
   }
 

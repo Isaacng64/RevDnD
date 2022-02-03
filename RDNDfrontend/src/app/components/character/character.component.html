@@ -1,23 +1,26 @@
-<h2>My Characters</h2>
 
-<div>
-  <label for="new-character">Character name: </label>
-  <input id="new-character" #heroName />
 
-</div>
+<h3> Character Sheet</h3>
+
 
 <tr *ngFor="let char of characters">
-  <h3> Character Sheet</h3>
 <div>
     <div>
         <label> <b> Id: </b></label> {{char.Id}}
         <label> <b> Name : </b></label> {{char.name}}
+
     </div>
     <div>
       <label> <b> Race: </b></label> {{char.race}}
+      </div>
+      <div>
       <label> <b> Gender: </b></label> {{char.gender}}
+    </div>
+    <div>
       <label> <b> Classs: </b></label> {{char.classs}}
     </div>
+
+     <!--
     <br />
     <div>
       <label> <b> Level: </b></label> {{char.level}}
@@ -28,8 +31,11 @@
       <label> <b> Max Hp: </b></label> {{char.max_hp}}
     </div>
     <br />
+    -->
     <div>
-      <label> <b> Intelligence </b></label> {{char.intelligence}}
+      <label> <b> Intelligence: </b></label> {{char.intelligence}}
+    </div>
+    <div>
       <label> <b> Wisdom: </b></label> {{char.wisdom}}
     </div>
     <div>
@@ -48,11 +54,11 @@
     </div>
     <br />
     <div>
-      <label> <b> Temp HP </b></label> {{char.temp_hp}}
+      <label> <b> Temp HP: </b></label> {{char.temp_hp}}
     </div>
     <br />
     <div>
-      <label> <b> Equipment </b></label> {{char.equipment_id}}
+      <label> <b> Equipment: </b></label> {{char.equipment_id}}
     </div>
     <br />
     <div>
