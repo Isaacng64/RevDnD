@@ -32,5 +32,7 @@ export class ProfileComponent implements OnInit {
     console.log(event)
     this.update=false
     this.currentUser = this.token.getUser();
+    window.location.reload();
+
   }
 }

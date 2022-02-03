@@ -1,12 +1,12 @@
 <form #update="ngForm" (ngSubmit)="onUpdate(update.value)"> 
     <h1>Update Account Info</h1>
+    <br/>
     Username:<br /> 
     <div class="form-group">
-        <label for="username">Username</label>
 
        <input type ="text" minlength="3" maxlength="20" class="form-control" name="username" default="user.username" placeholder="{{user.username}}"  ngModel/> 
     </div>  
-    <br /> 
+
     <!--
     Password:<br /> 
     <div class="form-group">

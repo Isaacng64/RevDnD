@@ -1,4 +1,4 @@
-package com.revature.RDNDbackend.controllers;
+package com.revature.RDNDbackend.controller;
 
 import java.util.HashSet;
 import java.util.List;
