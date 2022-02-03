@@ -18,7 +18,6 @@ export class CharacterComponent implements OnInit {
     this.charactersService.findAll().subscribe((data:any)=>{
       this.characters = data;
       console.log(this.characters);
-
     });
   }
 

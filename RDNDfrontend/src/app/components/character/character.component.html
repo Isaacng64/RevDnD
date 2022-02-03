@@ -4,17 +4,83 @@
   <label for="new-character">Character name: </label>
   <input id="new-character" #heroName />
 
-  <!-- (click) passes input value to add() and then clears the input
-    <td>{{character.id}}</td>
-    <td>{{character.name}}</td>
-  -->
-
-
-  <button class="add-button" (click)="heroName.value=''">
-    Add Character
-  </button>
 </div>
 
 <tr *ngFor="let char of characters">
-  <card [characther]="char"></card>
+  <h3> Character Sheet</h3>
+<div>
+    <div>
+        <label> <b> Id: </b></label> {{char.Id}}
+        <label> <b> Name : </b></label> {{char.name}}
+    </div>
+    <div>
+      <label> <b> Race: </b></label> {{char.race}}
+      <label> <b> Gender: </b></label> {{char.gender}}
+      <label> <b> Classs: </b></label> {{char.classs}}
+    </div>
+    <br />
+    <div>
+      <label> <b> Level: </b></label> {{char.level}}
+      <label> <b> Strength: </b></label> {{char.strength}}
+      <label> <b> Dexterity: </b></label> {{char.dexterity}}
+      <label> <b> Constitution: </b></label> {{char.constitution}}
+      <label> <b> Curr Hp: </b></label> {{char.curr_hp}}
+      <label> <b> Max Hp: </b></label> {{char.max_hp}}
+    </div>
+    <br />
+    <div>
+      <label> <b> Intelligence </b></label> {{char.intelligence}}
+      <label> <b> Wisdom: </b></label> {{char.wisdom}}
+    </div>
+    <div>
+      <label> <b> Charisma: </b></label> {{char.charisma}}
+    </div>
+    <div>
+      <label> <b> Temp Hp: </b></label> {{char.temp_hp}}
+    </div>
+    <br />
+    <div>
+      <label> <b> Wisdom: </b></label> {{char.wisdom}}
+    </div>
+    <br />
+    <div>
+      <label> <b> Charisma:</b></label> {{char.charisma}}
+    </div>
+    <br />
+    <div>
+      <label> <b> Temp HP </b></label> {{char.temp_hp}}
+    </div>
+    <br />
+    <div>
+      <label> <b> Equipment </b></label> {{char.equipment_id}}
+    </div>
+    <br />
+    <div>
+      <label> <b> UID: </b></label> {{char.uid}}
+    </div>
+    <br />
+    <div>
+      <label> <b> Skills: </b></label> {{char.skills}}
+    </div>
+    <br />
+    <div>
+      <label> <b> Size: </b></label> {{char.size}}
+    </div>
+
+    <div>
+      <label> <b> AC: </b></label> {{char.ac}}
+    </div>
+    <div>
+      <label> <b> Speed: </b></label> {{char.speed}}
+    </div>
+    <div>
+      <label> <b> Money: </b></label> {{char.money}}
+    </div>
+    <div>
+      <label> <b> Proficenncy: </b></label> {{char.proficency}}
+    </div>
+    <div>
+      <label> <b> Treasure Id: </b></label> {{char.treasure_id}}
+    </div>
+</div>
 </tr>
