@@ -21,12 +21,14 @@ export class AddCharactherComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  saveCharacther(data:undefined){
+  saveCharacther(){
 
     //this.characther=data;
-
-    this.charactherService.saveCharacther(this.characther);
-    this.goToCharactherList();
+   // this.charactherService.saveCharacther(this.characther);
+      this.charactherService.save(this.characther).subscribe( data =>{
+      console.log(data);
+      })
+      this.goToCharactherList();
   }
 
   goToCharactherList(){
