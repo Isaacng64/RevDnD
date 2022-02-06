@@ -9,6 +9,7 @@ import { ReactiveFormsModule} from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
 import { CharacterComponent } from './components/character/character.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AddCharactherComponent } from './components/add-characther/add-characther.component';
 
 
 
@@ -16,7 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   declarations: [
     AppComponent,
     RegisterComponent,
-    CharacterComponent
+    CharacterComponent,
+    AddCharactherComponent
   ],
   imports: [
     BrowserModule,

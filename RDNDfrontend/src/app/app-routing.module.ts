@@ -8,6 +8,7 @@ import { CharacterComponent } from './components/character/character.component';
 const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'characters',component: CharacterComponent},
+  {path:'add-character',component: CharacterComponent}
 ];
 
 @NgModule({

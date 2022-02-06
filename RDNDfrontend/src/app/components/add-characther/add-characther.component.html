@@ -1,0 +1,124 @@
+<div class="row">
+  <div class="card col-md-6 offset-md-3 offset-md-3">
+      <div class="row">
+          <h3 class="text-center"> Create Characther </h3>
+          <hr />
+          <div class="card-body">
+              <form (ngSubmit)="onSubmit()">
+
+                  <div class="form-group">
+                      <label> Name</label>
+                      <input type="text" class="form-control" id="npcName" [(ngModel)]="characther.name" name="npcName">
+                      <label> Race:</label>
+                      <input type="text" class="form-control" id="npcRace" [(ngModel)]="characther.race" name="npcRace" maxlength="30" size="30">
+                  </div>
+                  <br />
+                  <!-- Core Info -->
+                  <div class="form-group">
+                    <label> Gender:</label>
+                    <input type="text" class="form-control" id="npcClass" [(ngModel)]="characther.gender" name="npcClass" maxlength="20" size="20">
+                    <label> Classs:</label>
+                    <input type="text" class="form-control" id="npcSize" [(ngModel)]="npc.classs" name="npcSize" maxlength="20" size="20">
+                    <label> Level:</label>
+                    <input type="text" class="form-control" id="npcAlignment" [(ngModel)]="characther.level" name="npcAlignment" maxlength="20" size="20">
+                  </div>
+                  <br />
+                  <!-- Stat block -->
+                  <div class="form-group">
+                    <label> Strength </label>
+                    <input type="number" class="form-control" id="npcStr" [(ngModel)]="characther.strength" name="npcStr" maxlength="2" size="2" min = "0" max = "99">
+                    <label> dexterity:</label>
+                    <input type="number" class="form-control" id="npcDex" [(ngModel)]="characther.dexterity" name="npcDex" maxlength="2" size="2" min = "0" max = "99">
+                    <label> constitution:  </label>
+                    <input type="number" class="form-control" id="npcCon" [(ngModel)]="characther.constitution" name="npcCon" maxlength="2" size="2" min = "0" max = "99">
+                    <label> curr_hp:</label>
+                    <input type="number" class="form-control" id="npcInt" [(ngModel)]="characther.curr_hp" name="npcInt" maxlength="2" size="2" min = "0" max = "99">
+                    <label> max_hp</label>
+                    <input type="number" class="form-control" id="npcWis" [(ngModel)]="characther.max_hp" name="npcWis" maxlength="2" size="2" min = "0" max = "99">
+                    <label>  intelligence  </label>
+                    <input type="number" class="form-control" id="npcCha" [(ngModel)]="characther.intelligence" name="npcCha" maxlength="2" size="2" min = "0" max = "99">
+                  </div>
+                  <br />
+                  <!-- Combat Block-->
+                  <div class="form-group">
+                    <label> wisdom:</label>
+                    <input type="number" class="form-control" id="npcArmorClass" [(ngModel)]="characther.wisdom" name="npcArmorClass" maxlength="2" size="4">
+                    <label> charisma:</label>
+                    <input type="number" class="form-control" id="npcHitPoint" [(ngModel)]="characther.charisma" name="npcHitPoint" maxlength="4" size="5">
+                    <br />
+                    <label> temp_hp:</label>
+                    <input type="text" class="form-control" id="npcSpeed" [(ngModel)]="characther.temp_hp" name="npcSpeed" maxlength="60" size="60">
+                    <br />
+                    <label> equipment_id:</label>
+                    <input type="text" class="form-control" id="npcSenses" [(ngModel)]="characther.equipment_id" name="npcSenses" maxlength="60" size="60">
+                  </div>
+                  <br />
+                  <!-- Skill Block -->
+                  <div class="boxed">
+                    <span contenteditable="true"></span>
+                    <label> uid</label>
+                    <br />
+                    <input type="text" class="form-control" id="npcSkills" [(ngModel)]="characther.uid" name="npcSkills">
+                  </div>
+                  <br />
+                  <!-- Saving throws-->
+                  <div class="boxed">
+                    <span contenteditable="true"></span>
+                    <label> skills :</label>
+                    <br />
+                    <input type="text" class="form-control" id="npcSavingThrows" [(ngModel)]="characther.skills" name="npcSavingThrows">
+                  </div>
+                  <br />
+                  <!-- Discription Block -->
+                  <div class="boxed">
+                    <span contenteditable="true"></span>
+                    <label>  size: </label>
+                    <br />
+                    <input type="text" class="form-control" id="npcActions" [(ngModel)]="characther.size" name="npcActions">
+                  </div>
+                  <br />
+                  <div class="boxed">
+                    <span contenteditable="true"></span>
+                    <label> ac:</label>
+                    <br />
+                    <input type="text" class="form-control" id="npcReactions" [(ngModel)]="characther.ac" name="npcReactions">
+                  </div>
+                  <br />
+                  <div class="boxed">
+                    <span contenteditable="true"></span>
+                    <label> speed: </label>
+                    <br />
+                    <input type="text" class="form-control" id="npcSpecialTraits" [(ngModel)]="characther.speed" name="npcSpecialTraits">
+                  </div>
+                  <br />
+                  <div class="boxed">
+                    <span contenteditable="true"></span>
+                    <label> money: </label>
+                    <br />
+                    <input type="text" class="form-control" id="npcLanguages" [(ngModel)]="characther.money" name="npcLanguages">
+                  </div>
+                  <br />
+                  <div class="boxed">
+                    <span contenteditable="true"></span>
+                    <label> proficiency:</label>
+                    <br />
+                    <input type="text" class="form-control" id="npcDiscription" [(ngModel)]="characther.proficency" name="npcDiscription">
+                  </div>
+                  <div class="boxed">
+                    <span contenteditable="true"></span>
+                    <label> treasure_id:</label>
+                    <br />
+                    <input type="text" class="form-control" id="npcDiscription" [(ngModel)]="characther.treasure_id" name="npcDiscription">
+                  </div>
+                  <br />
+
+                  <br />
+                  <button class="btn btn-success" type="submit">Submit</button>
+
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+

@@ -6,84 +6,37 @@
   width: 15em;
 }
 
-input {
+.div {
+  background-color: #2f3533;
+}
+
+table.tb {
+  width: 300px;
+  border-collapse: collapse;
+}
+.tb th,
+.tb td {
+  border: solid 1px rgb(85, 83, 83);
+  padding: 5px;
+}
+.tr-blue {
+  background-color: rgb(45, 22, 245);
+}
+
+.shadowbox {
+  width: 15em;
+  border: 1px solid #333;
+  box-shadow: 8px 8px 5px #444;
+  padding: 8px 12px;
+  background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+}
+
+.h1 {
   display: block;
-  width: 100%;
-  padding: 0.5rem;
-  margin: 1rem 0;
-  box-sizing: border-box;
-}
-
-.heroes li {
-  position: relative;
-  cursor: pointer;
-}
-
-.heroes li:hover {
-  left: 0.1em;
-}
-
-.heroes a {
-  color: #333;
-  text-decoration: none;
-  background-color: #eee;
-  margin: 0.5em;
-  padding: 0.3em 0;
-  height: 1.6em;
-  border-radius: 4px;
-  display: block;
-  width: 100%;
-}
-
-.heroes a:hover {
-  color: #2c3a41;
-  background-color: #e6e6e6;
-}
-
-.heroes a:active {
-  background-color: #525252;
-  color: #fafafa;
-}
-
-.heroes .badge {
-  display: inline-block;
-  font-size: small;
-  color: white;
-  padding: 0.8em 0.7em 0 0.7em;
-  background-color: #405061;
-  line-height: 1em;
-  position: relative;
-  left: -1px;
-  top: -4px;
-  height: 1.8em;
-  min-width: 16px;
-  text-align: right;
-  margin-right: 0.8em;
-  border-radius: 4px 0 0 4px;
-}
-
-.add-button {
-  padding: 0.5rem 1.5rem;
-  font-size: 1rem;
-  margin-bottom: 2rem;
-}
-
-.add-button:hover {
-  color: white;
-  background-color: #42545c;
-}
-
-button.delete {
-  position: absolute;
-  left: 210px;
-  top: 5px;
-  background-color: white;
-  color: #525252;
-  font-size: 1.1rem;
-  padding: 1px 10px 3px 10px;
-}
-
-button.delete:hover {
-  background-color: #525252;
-  color: white;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }

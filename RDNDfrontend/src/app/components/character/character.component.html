@@ -1,14 +1,14 @@
 
 
-<h3> Character Sheet</h3>
-
+<h1 class="shadow"> Character List</h1>
 
 <tr *ngFor="let char of characters">
-<div>
+<div class="shadowbox">
     <div>
-        <label> <b> Id: </b></label> {{char.Id}}
-        <label> <b> Name : </b></label> {{char.name}}
-
+        <label> <b>Id: </b></label> {{char.Id}}
+    </div>
+    <div>
+      <label> <b> Name : </b></label> {{char.name}}
     </div>
     <div>
       <label> <b> Race: </b></label> {{char.race}}
@@ -19,19 +19,6 @@
     <div>
       <label> <b> Classs: </b></label> {{char.classs}}
     </div>
-
-     <!--
-    <br />
-    <div>
-      <label> <b> Level: </b></label> {{char.level}}
-      <label> <b> Strength: </b></label> {{char.strength}}
-      <label> <b> Dexterity: </b></label> {{char.dexterity}}
-      <label> <b> Constitution: </b></label> {{char.constitution}}
-      <label> <b> Curr Hp: </b></label> {{char.curr_hp}}
-      <label> <b> Max Hp: </b></label> {{char.max_hp}}
-    </div>
-    <br />
-    -->
     <div>
       <label> <b> Intelligence: </b></label> {{char.intelligence}}
     </div>
@@ -43,18 +30,6 @@
     </div>
     <div>
       <label> <b> Temp Hp: </b></label> {{char.temp_hp}}
-    </div>
-    <br />
-    <div>
-      <label> <b> Wisdom: </b></label> {{char.wisdom}}
-    </div>
-    <br />
-    <div>
-      <label> <b> Charisma:</b></label> {{char.charisma}}
-    </div>
-    <br />
-    <div>
-      <label> <b> Temp HP: </b></label> {{char.temp_hp}}
     </div>
     <br />
     <div>

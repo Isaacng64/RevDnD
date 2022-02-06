@@ -11,6 +11,12 @@ import { Character } from '../models/character.model';
 }
 )
 export class CharacterService {
+  saveCharacther(characther: Character) {
+    throw new Error('Method not implemented.');
+  }
+  createCharacther(characther: any) {
+    throw new Error('Method not implemented.');
+  }
 
   private charactersUrl: string;
 
