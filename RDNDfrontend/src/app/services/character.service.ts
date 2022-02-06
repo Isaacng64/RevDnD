@@ -11,6 +11,8 @@ import { Character } from '../models/character.model';
 }
 )
 export class CharacterService {
+
+
   httpClient: any;
   saveCharacther(characther: Character) {
     throw new Error('Method not implemented.');
@@ -31,9 +33,6 @@ export class CharacterService {
       );
   }
 
-  public createNpc(character: Character): Observable<Object>{
-    return this.httpClient.post(`${this.charactersUrl}`, character);
-  }
   public getCharacter(): Observable<Character[]> {
     return this.http.get<Character[]>(
       this.charactersUrl
