@@ -23,12 +23,10 @@ export class AddCharactherComponent implements OnInit {
 
   saveCharacther(){
 
-    //this.characther=data;
-   // this.charactherService.saveCharacther(this.characther);
       this.charactherService.save(this.characther).subscribe( data =>{
       console.log(data);
       })
-      this.goToCharactherList();
+     // this.goToCharactherList();
   }
 
   goToCharactherList(){

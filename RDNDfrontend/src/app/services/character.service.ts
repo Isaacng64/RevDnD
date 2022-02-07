@@ -13,13 +13,7 @@ import { Character } from '../models/character.model';
 export class CharacterService {
 
 
-  httpClient: any;
-  saveCharacther(characther: Character) {
-    throw new Error('Method not implemented.');
-  }
-  createCharacther(characther: any) {
-    throw new Error('Method not implemented.');
-  }
+
 
   private charactersUrl: string;
 
