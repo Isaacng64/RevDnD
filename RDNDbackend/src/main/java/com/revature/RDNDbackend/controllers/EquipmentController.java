@@ -5,6 +5,7 @@ import com.revature.RDNDbackend.exceptions.ResourceNotFoundException;
 import com.revature.RDNDbackend.models.Equipment;
 import com.revature.RDNDbackend.repositories.EquipmentRepository;
 import org.jetbrains.annotations.NotNull;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,10 +13,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping("rdnd/")
+@RequestMapping("/rdnd")
 public class EquipmentController {
 
+    @Autowired
     private EquipmentRepository equipmentRepository;
 
     public EquipmentController(EquipmentRepository equipmentRepository) {
@@ -37,7 +40,7 @@ public class EquipmentController {
             "equipmentQuantity": 1
         }
     */
-    @PostMapping("equipment/create")
+    @PostMapping("/equipment/create")
     public ResponseEntity<Equipment> saveEquipment(@RequestBody Equipment equipment) {
         if ((equipment instanceof Equipment) && (equipment != null)) {
             return new ResponseEntity<Equipment>(equipmentRepository.save(equipment), HttpStatus.CREATED);
@@ -48,8 +51,8 @@ public class EquipmentController {
 
 
     // to get all equipment
-    // http://localhost:8080/rdnd/equipment/viewall
-    @GetMapping("equipment/viewall")
+    // http://localhost:8080/rdnd/equipment
+    @GetMapping("/equipment")
     public List<Equipment> getAllEquipment() {
         return equipmentRepository.findAll();
     }
@@ -57,7 +60,7 @@ public class EquipmentController {
 
     // to get equipment by id
     // http://localhost:8080/rdnd/equipment/1
-    @GetMapping("equipment/{eqId}")
+    @GetMapping("/equipment/{eqId}")
     public Equipment getEquipmentById(@PathVariable("eqId") long eId) {
         Optional<Equipment> equipment = equipmentRepository.findById(eId);
 
@@ -69,9 +72,18 @@ public class EquipmentController {
     }
 
 
+    // to get equipment by name
+    // http://localhost:8080/rdnd/equipment/name/Abacus
+    @GetMapping("/equipment/name/{eqName}")
+    public List<Equipment> getEquipmentById(@PathVariable("eqName") String equipmentName) {
+
+        return equipmentRepository.findEquipmentByName(equipmentName);
+    }
+
+
     // to update equipment
     // http://localhost:8080/rdnd/equipment/1
-    @PutMapping("equipment/{eqId}")
+    @PutMapping("/equipment/{eqId}")
     public Equipment updateEquipment(@PathVariable("eqId") long eId,
                                      @RequestBody @NotNull Equipment newerEquipment) {
         // check whether equipment with given id is existing in the database
@@ -96,8 +108,8 @@ public class EquipmentController {
 
     // to delete equipment
     // http://localhost:8080/rdnd/equipment/1
-    @DeleteMapping("equipment/{eqId}")
-    public boolean deleteEquipment(long eId) {
+    @DeleteMapping("/equipment/{eqId}")
+    public boolean deleteEquipment(@PathVariable("eqId") long eId) {
         try {
             equipmentRepository.deleteById(eId);
 
