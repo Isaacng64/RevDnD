@@ -15,4 +15,13 @@ export class EquipmentService {
   getEquipmentList(): Observable<Equipment[]> {
     return this.httpClient.get<Equipment[]>(`${this.baseURL}`);
   }
+
+  getEquipmentById(id: number): Observable<Equipment> {
+    return this.httpClient.get<Equipment>(`${this.baseURL}/${id}`);
+  }
+
+  createEquipment(equipment: Equipment): Observable<Object> {
+    return this.httpClient.post(`${this.baseURL}/create`, equipment);
+  }
+  
 }

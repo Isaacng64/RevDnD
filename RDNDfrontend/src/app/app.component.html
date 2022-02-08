@@ -1,9 +1,20 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a routerLink="equipment" routerLinkActive="active" class="nav-link">Equipment List</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="create-equipment" routerLinkActive="active" class="nav-link">Add Equipment</a>
+    </li>
+  </ul>
+</nav>
+
 <h1 class="text-center"> {{title}} </h1>
-<div class = "container">
-<app-equipment-list></app-equipment-list>
+<div class="container">
   <router-outlet></router-outlet>
 </div>
-<footer class = "footer">
-  <div class = "container">
+<footer class="footer">
+  <div class="container">
+    <span>Revature D&D Dev. Team</span>
   </div>
 </footer>
