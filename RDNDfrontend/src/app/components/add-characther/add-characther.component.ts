@@ -3,7 +3,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CharacterService } from 'src/app/services/character.service';
-import {Character} from 'src/app/models/character.model';
+import { Character } from 'src/app/models/character.model';
 
 @Component({
   selector: 'app-add-characther',
@@ -14,26 +14,32 @@ import {Character} from 'src/app/models/character.model';
 export class AddCharactherComponent implements OnInit {
 
   characther: Character = new Character();
+  charactherService: any;
 
-  constructor(private charactherService: CharacterService,
+  constructor(
     private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  saveCharacther(){
+  saveCharacther() {
 
-      this.charactherService.save(this.characther).subscribe( data =>{
+    this.charactherService.save(this.characther).subscribe((data: any) => {
       console.log(data);
-      })
-     // this.goToCharactherList();
+    })
+    this.goToCharactherList();
+
   }
 
-  goToCharactherList(){
+  goToCharactherList() {
     this.router.navigate(['/characthers']);
   }
 
-  onSubmit(){
+  onSubmit() {
+
     console.log(this.characther);
+
+    this.saveCharacther();
+
   }
 }

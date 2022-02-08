@@ -3,12 +3,13 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 import { Character } from '../models/character.model';
+import { AddCharactherComponent } from '../components/add-characther/add-characther.component';
 
 
 @Injectable(
-{
-  providedIn: Character,
-}
+  {
+    providedIn: Character
+  }
 )
 export class CharacterService {
 
@@ -24,13 +25,13 @@ export class CharacterService {
   public findAll(): Observable<Character[]> {
     return this.http.get<Character[]>(
       this.charactersUrl
-      );
+    );
   }
 
   public getCharacter(): Observable<Character[]> {
     return this.http.get<Character[]>(
       this.charactersUrl
-      );
+    );
   }
 
   public save(character: Character) {

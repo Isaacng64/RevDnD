@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule } from '@angular/forms'
-import { ReactiveFormsModule} from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
 import { CharacterComponent } from './components/character/character.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { AddCharComponent } from './add-char/add-char.component';
 import { AddCharactherComponent } from './components/add-characther/add-characther.component';
 
 
@@ -18,7 +20,8 @@ import { AddCharactherComponent } from './components/add-characther/add-characth
     AppComponent,
     RegisterComponent,
     CharacterComponent,
-    AddCharactherComponent
+    AddCharactherComponent,
+    AddCharComponent
   ],
   imports: [
     BrowserModule,
