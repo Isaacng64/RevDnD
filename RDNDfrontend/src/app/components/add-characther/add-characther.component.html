@@ -9,19 +9,19 @@
         <form (ngSubmit)="onSubmit()">
           <div class="form-group">
             <label> Name:</label>
-            <input type="text" class="form-control" id="npcName" [(ngModel)]="characther.name" name="npcName">
+            <input type="text" class="form-control" id="name" [(ngModel)]="characther.name" name="npcName">
             <label> Race:</label>
-            <input type="text" class="form-control" id="npcRace" [(ngModel)]="characther.race" name="npcRace"
+            <input type="text" class="form-control" id="race" [(ngModel)]="characther.race" name="npcRace"
               maxlength="30" size="30">
           </div>
           <br />
           <!-- Core Info -->
           <div class="form-group">
             <label> Gender:</label>
-            <input type="text" class="form-control" id="npcClass" [(ngModel)]="characther.gender" name="npcClass"
+            <input type="text" class="form-control" id="gender" [(ngModel)]="characther.gender" name="npcClass"
               maxlength="20" size="20">
             <label> Classs:</label>
-            <input type="text" class="form-control" id="npcSize" [(ngModel)]="characther.classs" name="npcSize"
+            <input type="text" class="form-control" id="classs" [(ngModel)]="characther.classs" name="classs"
               maxlength="20" size="20">
             <label> Level:</label>
             <input type="text" class="form-control" id="npcAlignment" [(ngModel)]="characther.level" name="npcAlignment"
@@ -65,7 +65,7 @@
             <br />
             <label> equipment_id:</label>
             <input type="text" class="form-control" id="npcSenses" [(ngModel)]="characther.equipment_id"
-              name="npcSenses" maxlength="60" size="60">
+              name="equipment_id" maxlength="60" size="60">
           </div>
           <br />
           <!-- Skill Block -->
