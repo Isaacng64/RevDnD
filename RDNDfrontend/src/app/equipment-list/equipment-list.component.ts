@@ -9,7 +9,7 @@ import { EquipmentService } from '../equipment.service';
 })
 export class EquipmentListComponent implements OnInit {
 
-  equipment: any;
+  equipment!: Equipment[];
 
   constructor(
     private equipmentService: EquipmentService,
@@ -37,7 +37,7 @@ export class EquipmentListComponent implements OnInit {
     });
   }
 
-  viewEquipmentDetails(id: number){
+  viewEquipmentDetails(id: number) {
     this.router.navigate(['equipment-details', id]);
   }
 
