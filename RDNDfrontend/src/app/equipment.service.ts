@@ -23,5 +23,9 @@ export class EquipmentService {
   createEquipment(equipment: Equipment): Observable<Object> {
     return this.httpClient.post(`${this.baseURL}/create`, equipment);
   }
-  
+
+  updateEquipment(id: number, equipment: Equipment): Observable<Object> {
+    return this.httpClient.put(`${this.baseURL}/${id}`, equipment);
+  }
+
 }

@@ -12,8 +12,10 @@ export class CreateEquipmentComponent implements OnInit {
 
   equipment: Equipment = new Equipment();
 
-  constructor(private equipmentService: EquipmentService,
-    private router: Router) { }
+  constructor(
+    private equipmentService: EquipmentService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
@@ -25,7 +27,7 @@ export class CreateEquipmentComponent implements OnInit {
     });
   }
 
-  goToEquipmentList(){
+  goToEquipmentList() {
     this.router.navigate(['equipment']);
   }
 

@@ -10,6 +10,7 @@
             <th>Damage Bonus</th>
             <th>Properties</th>
             <th>Quantity</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -22,6 +23,9 @@
             <td>{{ eqmnt.damageBonus }}</td>
             <td>{{ eqmnt.equipmentProperties }}</td>
             <td>{{ eqmnt.equipmentQuantity }}</td>
+            <td>
+                <button (click) = "updateEquipment(eqmnt.equipmentId)" class = "btn btn-info"> Update </button>
+            </td>
         </tr>
     </tbody>
 </table>
