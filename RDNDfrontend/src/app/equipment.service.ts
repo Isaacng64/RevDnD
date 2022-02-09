@@ -28,4 +28,8 @@ export class EquipmentService {
     return this.httpClient.put(`${this.baseURL}/${id}`, equipment);
   }
 
+  deleteEquipment(id: number): Observable<Object> {
+    return this.httpClient.delete(`${this.baseURL}/${id}`);
+  }
+
 }
