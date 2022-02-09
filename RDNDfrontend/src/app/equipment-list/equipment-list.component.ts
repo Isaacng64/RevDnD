@@ -37,4 +37,8 @@ export class EquipmentListComponent implements OnInit {
     });
   }
 
+  viewEquipmentDetails(id: number){
+    this.router.navigate(['equipment-details', id]);
+  }
+
 }

@@ -7,6 +7,7 @@ import { EquipmentListComponent } from './equipment-list/equipment-list.componen
 import { CreateEquipmentComponent } from './create-equipment/create-equipment.component';
 import { UpdateEquipmentComponent } from './update-equipment/update-equipment.component';
 import { FormsModule } from '@angular/forms';
+import { EquipmentDetailsComponent } from './equipment-details/equipment-details.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     EquipmentListComponent,
     CreateEquipmentComponent,
-    UpdateEquipmentComponent
+    UpdateEquipmentComponent,
+    EquipmentDetailsComponent
   ],
   imports: [
     BrowserModule,
