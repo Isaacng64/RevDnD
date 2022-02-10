@@ -27,6 +27,11 @@ import { CreateEquipmentComponent } from './create-equipment/create-equipment.co
 import { UpdateEquipmentComponent } from './update-equipment/update-equipment.component';
 import { EquipmentDetailsComponent } from './equipment-details/equipment-details.component';
 
+import { CharacterComponent } from './components/character/character.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { AddCharComponent } from './add-char/add-char.component';
+import { AddCharactherComponent } from './components/add-characther/add-characther.component';
 
 @NgModule({
   declarations: [
@@ -48,14 +53,18 @@ import { EquipmentDetailsComponent } from './equipment-details/equipment-details
     EquipmentListComponent,
     CreateEquipmentComponent,
     UpdateEquipmentComponent,
-    EquipmentDetailsComponent
+    EquipmentDetailsComponent,
+    CharacterComponent,
+    AddCharactherComponent,
+    AddCharComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent],

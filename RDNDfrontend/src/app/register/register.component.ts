@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../_services/auth.service';
 
+
+import { UserService } from '../user.service';
+import { FormsModule } from '@angular/forms'
+import { ReactiveFormsModule} from '@angular/forms'
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
