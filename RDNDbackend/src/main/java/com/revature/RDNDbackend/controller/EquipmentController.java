@@ -4,7 +4,7 @@ import com.revature.RDNDbackend.exception.BadRequestException;
 import com.revature.RDNDbackend.exception.ResourceNotFoundException;
 import com.revature.RDNDbackend.model.Equipment;
 import com.revature.RDNDbackend.repository.EquipmentRepository;
-import org.jetbrains.annotations.NotNull;
+//import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -85,7 +85,7 @@ public class EquipmentController {
     // http://localhost:8080/rdnd/equipment/1
     @PutMapping("/equipment/{eqId}")
     public Equipment updateEquipment(@PathVariable("eqId") long eId,
-                                     @RequestBody @NotNull Equipment newerEquipment) {
+                                     @RequestBody  Equipment newerEquipment) {
         // check whether equipment with given id is existing in the database
         Equipment existingEquipment = equipmentRepository.findById(eId).orElseThrow(
                 () -> new ResourceNotFoundException("Equipment with Id: " + eId + " was not found."));

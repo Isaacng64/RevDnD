@@ -21,11 +21,13 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.revature.RDNDbackend.model.Characters;
 import com.revature.RDNDbackend.model.ERole;
 import com.revature.RDNDbackend.model.Role;
 import com.revature.RDNDbackend.model.User;
@@ -33,6 +35,7 @@ import com.revature.RDNDbackend.payload.request.LoginRequest;
 import com.revature.RDNDbackend.payload.request.SignupRequest;
 import com.revature.RDNDbackend.payload.response.JwtResponse;
 import com.revature.RDNDbackend.payload.response.MessageResponse;
+import com.revature.RDNDbackend.repository.CharacterRepository;
 import com.revature.RDNDbackend.repository.RoleRepository;
 import com.revature.RDNDbackend.repository.UserRepository;
 import com.revature.RDNDbackend.security.jwt.JwtUtils;
@@ -56,7 +59,12 @@ public class AuthController {
 
 	@Autowired
 	JwtUtils jwtUtils;
+	
+	@Autowired
+	CharacterRepository charRepository;
 
+
+	
 	@PostMapping("/signin")
 	public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
 
@@ -77,7 +85,17 @@ public class AuthController {
 												 userDetails.getEmail(), 
 												 roles));
 	}
-
+	 @GetMapping("/characters")
+		public List<Characters> getCharacters(){
+			
+			return charRepository.findAll();
+		}
+		 
+		 
+		 @PostMapping("/character")
+		 public Characters addCharacter(Characters character) {
+			 return charRepository.save(character);
+		 }
 	@PostMapping("/signup")
 	public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
 		if (userRepository.existsByUsername(signUpRequest.getUsername())) {

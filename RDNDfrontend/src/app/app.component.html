@@ -11,11 +11,10 @@
       <li class="nav-item" *ngIf="showModeratorBoard">
         <a href="/mod" class="nav-link" routerLink="mod">Moderator Board</a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user"
-          >User</a
-        >
-      </li>
+          >User</a>
+      </li> -->
     </ul>
 
     <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
@@ -33,12 +32,12 @@
           username
         }}</a>
       </li>
-      <li class = "nav-item">
+      <!-- <li class = "nav-item">
         <a href="/add-characthers" class="nav-link" routerLink="add-characthers">Add Character</a>
       </li>
       <li class = "nav-item">
         <a href="/characters" class="nav-link" routerLink="characters">Characters</a>
-      </li>
+      </li> -->
       <li class="nav-item">
         <a href="/monsters" class="nav-link" routerLink="monsters">Monsters</a>
       </li>
@@ -52,7 +51,7 @@
         <a routerLink="equipment" routerLinkActive="active" class="nav-link">Equipment List</a>
       </li>
       <li class="nav-item">
-        <a routerLink="create-equipment" routerLinkActive="active" class="nav-link">Modify Equipment</a>
+        <a routerLink="create-equipment" routerLinkActive="active" class="nav-link">Create Equipment</a>
       </li>
 
       <li class="nav-item">
