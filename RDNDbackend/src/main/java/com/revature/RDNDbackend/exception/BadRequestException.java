@@ -1,4 +1,4 @@
-package com.revature.RDNDbackend.exceptions;
+package com.revature.RDNDbackend.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

@@ -1,7 +1,6 @@
-package com.revature.RDNDbackend.models;
+package com.revature.RDNDbackend.model;
 
 import javax.persistence.*;
-import java.util.Arrays;
 
 @Entity
 @Table(name = "equipment")
@@ -27,7 +26,7 @@ public class Equipment {
     private Integer damageBonus;
 
     @Column(name = "equipment_properties")
-    private String[] equipmentProperties;
+    private String equipmentProperties;
 
     @Column(name = "equipment_quantity")
     private Integer equipmentQuantity;
@@ -37,7 +36,8 @@ public class Equipment {
     }
 
     public Equipment(String equipmentName, String equipmentType, Integer equipmentPrice, Integer hitBonus,
-                     Integer damageBonus, String[] equipmentProperties, Integer equipmentQuantity) {
+                     Integer damageBonus, String equipmentProperties, Integer equipmentQuantity) {
+        super();
         this.equipmentName = equipmentName;
         this.equipmentType = equipmentType;
         this.equipmentPrice = equipmentPrice;
@@ -95,11 +95,11 @@ public class Equipment {
         this.damageBonus = damageBonus;
     }
 
-    public String[] getEquipmentProperties() {
+    public String getEquipmentProperties() {
         return equipmentProperties;
     }
 
-    public void setEquipmentProperties(String[] equipmentProperties) {
+    public void setEquipmentProperties(String equipmentProperties) {
         this.equipmentProperties = equipmentProperties;
     }
 
@@ -120,7 +120,7 @@ public class Equipment {
                 ", equipmentPrice=" + equipmentPrice +
                 ", hitBonus=" + hitBonus +
                 ", damageBonus=" + damageBonus +
-                ", equipmentProperties=" + Arrays.toString(equipmentProperties) +
+                ", equipmentProperties=" + equipmentProperties +
                 ", equipmentQuantity=" + equipmentQuantity +
                 '}';
     }
