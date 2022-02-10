@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CreateEquipmentComponent } from './create-equipment/create-equipment.component';
+import { EquipmentDetailsComponent } from './equipment-details/equipment-details.component';
+import { EquipmentListComponent } from './equipment-list/equipment-list.component';
+import { UpdateEquipmentComponent } from './update-equipment/update-equipment.component';
 
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
@@ -29,7 +33,12 @@ const routes: Routes = [
   { path: 'npcs', component: NpcListComponent },
   { path: 'npc-create', component: NpcCreateComponent },
   { path: 'npc-update/:npcId', component: NpcUpdateComponent },
-  { path: 'npc-sheet/:npcId', component: NpcSheetComponent }
+  { path: 'npc-sheet/:npcId', component: NpcSheetComponent },
+  { path: 'equipment', component: EquipmentListComponent },
+  { path: 'create-equipment', component: CreateEquipmentComponent },
+  { path: '', redirectTo: 'equipment', pathMatch: 'full' },
+  { path: 'update-equipment/:id', component: UpdateEquipmentComponent },
+  { path: 'equipment-details/:id', component: EquipmentDetailsComponent }
 ];
 
 @NgModule({

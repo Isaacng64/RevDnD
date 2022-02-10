@@ -22,6 +22,11 @@ import { NpcUpdateComponent } from './npc-update/npc-update.component';
 import { NpcListComponent } from './npc-list/npc-list.component';
 import { NpcSheetComponent } from './npc-sheet/npc-sheet.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
+import { EquipmentListComponent } from './equipment-list/equipment-list.component';
+import { CreateEquipmentComponent } from './create-equipment/create-equipment.component';
+import { UpdateEquipmentComponent } from './update-equipment/update-equipment.component';
+import { EquipmentDetailsComponent } from './equipment-details/equipment-details.component';
+
 
 @NgModule({
   declarations: [
@@ -40,6 +45,10 @@ import { UpdateUserComponent } from './update-user/update-user.component';
     NpcListComponent,
     NpcSheetComponent,
     UpdateUserComponent,
+    EquipmentListComponent,
+    CreateEquipmentComponent,
+    UpdateEquipmentComponent,
+    EquipmentDetailsComponent
   ],
   imports: [
     BrowserModule,
