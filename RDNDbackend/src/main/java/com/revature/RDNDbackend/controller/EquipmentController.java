@@ -1,9 +1,9 @@
-package com.revature.RDNDbackend.controllers;
+package com.revature.RDNDbackend.controller;
 
-import com.revature.RDNDbackend.exceptions.BadRequestException;
-import com.revature.RDNDbackend.exceptions.ResourceNotFoundException;
-import com.revature.RDNDbackend.models.Equipment;
-import com.revature.RDNDbackend.repositories.EquipmentRepository;
+import com.revature.RDNDbackend.exception.BadRequestException;
+import com.revature.RDNDbackend.exception.ResourceNotFoundException;
+import com.revature.RDNDbackend.model.Equipment;
+import com.revature.RDNDbackend.repository.EquipmentRepository;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

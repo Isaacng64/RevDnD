@@ -8,7 +8,7 @@ import { Equipment } from './equipment';
 })
 export class EquipmentService {
 
-  private baseURL = 'http://localhost:8080/rdnd/equipment';
+  private baseURL = 'http://localhost:8086/rdnd/equipment';
 
   constructor(private httpClient: HttpClient) { }
 
