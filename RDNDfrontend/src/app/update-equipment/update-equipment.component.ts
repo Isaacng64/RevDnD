@@ -20,7 +20,7 @@ export class UpdateEquipmentComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['id'];
+    this.id = this.route.snapshot.params['id'];   // to take in the id param from the url
     this.equipmentService.getEquipmentById(this.id).subscribe(data => {
       this.equipment = data;
     });
@@ -32,7 +32,7 @@ export class UpdateEquipmentComponent implements OnInit {
     });
   }
 
-  goToEquipmentList(){
+  goToEquipmentList() {
     this.router.navigate(['/equipment']);
   }
 
