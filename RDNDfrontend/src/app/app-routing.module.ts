@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CreateEquipmentComponent } from './create-equipment/create-equipment.component';
+import { EquipmentDetailsComponent } from './equipment-details/equipment-details.component';
+import { EquipmentListComponent } from './equipment-list/equipment-list.component';
+import { UpdateEquipmentComponent } from './update-equipment/update-equipment.component';
 
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
@@ -14,6 +18,9 @@ import { NpcCreateComponent } from './npc-create/npc-create.component';
 import { NpcUpdateComponent } from './npc-update/npc-update.component';
 import { NpcListComponent } from './npc-list/npc-list.component';
 import { NpcSheetComponent } from './npc-sheet/npc-sheet.component';
+import { AddCharactherComponent } from './components/add-characther/add-characther.component';
+import { CharacterComponent } from './components/character/character.component';
+import { AddCharComponent } from './add-char/add-char.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -25,15 +32,23 @@ const routes: Routes = [
   { path: 'admin', component: BoardAdminComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'monsters', component: MonsterComponent },
-  { path: 'monster/:name', component:  MonsterCardComponent},
+  { path: 'monster/:name', component: MonsterCardComponent },
   { path: 'npcs', component: NpcListComponent },
   { path: 'npc-create', component: NpcCreateComponent },
   { path: 'npc-update/:npcId', component: NpcUpdateComponent },
-  { path: 'npc-sheet/:npcId', component: NpcSheetComponent }
+  { path: 'npc-sheet/:npcId', component: NpcSheetComponent },
+  { path: 'equipment', component: EquipmentListComponent },
+  { path: 'create-equipment', component: CreateEquipmentComponent },
+  { path: '', redirectTo: 'equipment', pathMatch: 'full' },
+  { path: 'update-equipment/:id', component: UpdateEquipmentComponent },
+  { path: 'equipment-details/:id', component: EquipmentDetailsComponent },
+  { path: 'characters', component: CharacterComponent },
+  { path: 'add-characthers', component: AddCharactherComponent },
+  { path: 'add-char', component: AddCharComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

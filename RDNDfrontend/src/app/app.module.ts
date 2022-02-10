@@ -22,6 +22,16 @@ import { NpcUpdateComponent } from './npc-update/npc-update.component';
 import { NpcListComponent } from './npc-list/npc-list.component';
 import { NpcSheetComponent } from './npc-sheet/npc-sheet.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
+import { EquipmentListComponent } from './equipment-list/equipment-list.component';
+import { CreateEquipmentComponent } from './create-equipment/create-equipment.component';
+import { UpdateEquipmentComponent } from './update-equipment/update-equipment.component';
+import { EquipmentDetailsComponent } from './equipment-details/equipment-details.component';
+
+import { CharacterComponent } from './components/character/character.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { AddCharComponent } from './add-char/add-char.component';
+import { AddCharactherComponent } from './components/add-characther/add-characther.component';
 
 @NgModule({
   declarations: [
@@ -40,13 +50,21 @@ import { UpdateUserComponent } from './update-user/update-user.component';
     NpcListComponent,
     NpcSheetComponent,
     UpdateUserComponent,
+    EquipmentListComponent,
+    CreateEquipmentComponent,
+    UpdateEquipmentComponent,
+    EquipmentDetailsComponent,
+    CharacterComponent,
+    AddCharactherComponent,
+    AddCharComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent],

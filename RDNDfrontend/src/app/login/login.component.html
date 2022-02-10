@@ -49,11 +49,11 @@
             role="alert"
             *ngIf="password.errors && f.submitted"
           >
-            <div *ngIf="password.errors.required">Password is required</div>
-            <div *ngIf="password.errors.minlength">
+            <div *ngIf="password.errors?.['required']">Password is required</div>
+            <div *ngIf="password.errors?.['minlength']">
               Password must be at least 8 characters
             </div>
-            <div *ngIf="password.errors.maxlength">
+            <div *ngIf="password.errors?.['maxlength']">
               Password must be at most 15 characters
             </div>
           </div>

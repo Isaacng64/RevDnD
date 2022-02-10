@@ -1,0 +1,42 @@
+/* HeroesComponent's private CSS styles */
+.character {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+}
+
+.div {
+  background-color: #2f3533;
+}
+
+table.tb {
+  width: 300px;
+  border-collapse: collapse;
+}
+.tb th,
+.tb td {
+  border: solid 1px rgb(85, 83, 83);
+  padding: 5px;
+}
+.tr-blue {
+  background-color: rgb(45, 22, 245);
+}
+
+.shadowbox {
+  width: 15em;
+  border: 1px solid #333;
+  box-shadow: 8px 8px 5px #444;
+  padding: 8px 12px;
+  background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+}
+
+.h1 {
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
